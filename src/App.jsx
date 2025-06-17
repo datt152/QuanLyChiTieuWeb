@@ -10,12 +10,14 @@ import Statistics from './pages/Statistics';
 import Review from './pages/Review';
 import Reminders from './pages/Reminders';
 import Login from './pages/Login';
+import MainLayout from './components/MainLayout';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Dashboard />,
+    element: <MainLayout />,
     children: [
+      { index: true, element: <Dashboard /> },
       { path: 'profile', element: <ProfileSetup /> },
       { path: 'budget', element: <BudgetGoal /> },
       { path: 'expenses', element: <ExpenseEntry /> },
