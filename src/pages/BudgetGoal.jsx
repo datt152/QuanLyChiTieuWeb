@@ -3,7 +3,7 @@ import React from 'react'
 function BudgetGoal() {
   return (
     <div>
-      BudgetGoal
+      BudgetGoal alasldfhasdflasdflhaf
     </div>
   )
 }

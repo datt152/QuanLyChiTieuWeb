@@ -1,32 +1,60 @@
 // src/components/Header.jsx
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import logo from '../assets/logo.png';
 
 const navItems = [
   { path: '/', label: 'Trang chủ' },
-  { path: '/profile', label: 'Hồ sơ' },
   { path: '/budget', label: 'Ngân sách' },
   { path: '/expenses', label: 'Chi tiêu' },
   { path: '/statistics', label: 'Thống kê' },
   { path: '/review', label: 'Đánh giá' },
-  { path: '/login', label: 'Đăng xuất' },
 ];
 
 export default function Header() {
   return (
-    <header className="bg-gradient-to-r from-yellow-100 to-yellow-400 text-yellow-900 p-4 shadow-md">
-      <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-xl font-bold">Chi tiêu cá nhân</h1>
-        <nav className="flex gap-2 flex-wrap text-sm">
+    <header className="bg-gradient-to-r from-yellow-100 to-yellow-400 text-yellow-900 shadow-md w-full">
+      <div className="container mx-auto flex justify-between items-center gap-5 p-2">
+        {/* Logo + tên thương hiệu */}
+        <div className="flex items-center gap-4">
+          <img
+            src={logo}
+            alt="Logo"
+            className="w-15 h-15 object-contain rounded-full bg-white p-1 shadow"
+          />
+          <div className="leading-tight">
+            <h1 className="text-2xl font-bold">MoneyMate</h1>
+            <p className="italic text-sm">Money Master, Made Easy</p>
+          </div>
+        </div>
+
+        {/* Navigation */}
+        <nav className="flex gap-5 flex-wrap text-base">
           {navItems.map(({ path, label }) => (
-            <Link
+            <NavLink
               key={path}
               to={path}
-              className="px-3 py-1 p-2 rounded-2xl text-lg transition duration-200 hover:bg-white hover:text-amber-700"
+              className={({ isActive }) =>
+                `p-2 text-lg rounded-xl transition duration-200 hover:bg-white hover:text-amber-700 ${
+                  isActive ? 'bg-white text-amber-700' : ''
+                }`
+              }
             >
               {label}
-            </Link>
+            </NavLink>
           ))}
         </nav>
+
+        {/* User info + avatar */}
+        <div className="flex items-center gap-4">
+          <div className="leading-tight">
+            <p className="italic text-lg">Xin chào Dat</p>
+          </div>
+          <img
+            src={logo}
+            alt="Avatar"
+            className="w-15 h-15 object-contain rounded-full bg-white p-1 shadow"
+          />
+        </div>
       </div>
     </header>
   );
