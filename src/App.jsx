@@ -10,6 +10,7 @@ import Review from './pages/Review';
 import Reminders from './pages/Reminders';
 import Login from './pages/Login';
 import MainLayout from './components/MainLayout';
+import Register from './pages/Register';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
     path: '/login',
     element: <Login />,
   },
+  {
+    path: '/register',
+    element: <Register/>
+  }
 ]);
 
 
