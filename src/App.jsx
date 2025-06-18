@@ -11,6 +11,7 @@ import Reminders from './pages/Reminders';
 import Login from './pages/Login';
 import MainLayout from './components/MainLayout';
 import Register from './pages/Register';
+import PageNotFound from './pages/PageNotFound';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: '/register',
     element: <Register/>
+  },
+   {
+    path: '*',
+    element: <PageNotFound/>
   }
 ]);
 
