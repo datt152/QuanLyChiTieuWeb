@@ -1,7 +1,7 @@
 // src/components/Header.jsx
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png';
-
+import avatar from '../assets/avatar.jpg'
 const navItems = [
   { path: '/', label: 'Trang chủ' },
   { path: '/budget', label: 'Ngân sách' },
@@ -50,7 +50,7 @@ export default function Header() {
             <p className="italic text-lg">Xin chào Dat</p>
           </div>
           <img
-            src={logo}
+            src={avatar}
             alt="Avatar"
             className="w-15 h-15 object-contain rounded-full bg-white p-1 shadow"
           />
