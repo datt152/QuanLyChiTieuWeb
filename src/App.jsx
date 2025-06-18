@@ -2,7 +2,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import ProfileSetup from './pages/ProfileSetup';
 import BudgetGoal from './pages/BudgetGoal';
-import ExpenseEntry from './pages/ExpenseEntry';
 import DailySuggestion from './pages/DailySuggestion';
 import Alerts from './pages/Alert';
 import Statistics from './pages/Statistics';
@@ -19,7 +18,6 @@ const router = createBrowserRouter([
       { index: true, element: <Dashboard /> },
       { path: 'profile', element: <ProfileSetup /> },
       { path: 'budget', element: <BudgetGoal /> },
-      { path: 'expenses', element: <ExpenseEntry /> },
       { path: 'suggestion', element: <DailySuggestion /> },
       { path: 'alerts', element: <Alerts /> },
       { path: 'statistics', element: <Statistics /> },

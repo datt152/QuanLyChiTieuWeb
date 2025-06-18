@@ -5,7 +5,6 @@ import logo from '../assets/logo.png';
 const navItems = [
   { path: '/', label: 'Trang chủ' },
   { path: '/budget', label: 'Ngân sách' },
-  { path: '/expenses', label: 'Chi tiêu' },
   { path: '/statistics', label: 'Thống kê' },
   { path: '/review', label: 'Đánh giá' },
 ];
